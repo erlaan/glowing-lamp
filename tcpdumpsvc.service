@@ -1,0 +1,16 @@
+[Unit]
+Description=Tcpdump service
+After=network.target
+
+[Service]
+ExecStart=/bin/bash /usr/bin/tcpdumpscript.sh
+WorkingDirectory=/var/log/tcpdump/
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+RestartSec=30
+TimeoutSec=5
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
