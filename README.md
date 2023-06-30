@@ -2,15 +2,21 @@
 This is a service i use to make sure a computer that is used for it-security is logging network-trafik from start.
 
 
-Installation
+# Prerequisite
+To run this program tcpdump need to be installed
+## Installation 
+´´´
+make install
+...
+# Running the Program
 
-Put tcpdumpscript.sh in /usr/bin/
+If you just need it one time run
+´´´
+systemctl start glowing-lampsvc.service
+...
+If you want it to run everytime you start your computer run command
+´´´
+systemctl enable glowing-lampsvc.service
+...
 
-and tcpdumpsvc.service in /etc/systemd/system/
-
-chmod 700 /usr/bin/tcpdumpscript.sh
-
-systemctl daemon-reload
-
-systemctl enable tcpdumpsvc
-systemctl start tcpdumpsvc
+# Todo 
