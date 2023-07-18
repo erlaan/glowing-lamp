@@ -1,5 +1,5 @@
 #! /bin/bash
-if [ ! -d "/var/log/tcpdump/"]; then
+if [ !  -d "/var/log/tcpdump/"  ]; then
    mkdir /var/log/tcpdump/
 fi
 DATE=`date +%k%M`
