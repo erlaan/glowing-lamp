@@ -4,9 +4,11 @@ NAME = glowing-lamp
 default:
 
 install:
-	install -D -p -m 755 $(NAME) $(DESTDIR)$(PREFIX)/usr/bin/$(NAME)
-	install -D -p -m 544 $(SERVICE) $(DESTDIR)$(PREFIX)/etc/systemd/system/$(SERVICE)
+	install -D -p -m 755 $(NAME) /usr/local/bin/$(NAME)
+	install -D -p -m 544 $(SERVICE) /etc/systemd/system/$(SERVICE)
 	systemctl daemon-reload
+	systemctl enable $(NAME)
+	systemctl start $(NAME)
 uninstall:
-	rm /usr/bin/$(NAME)
+	rm /usr/local/bin/$(NAME)
 	rm /etc/systemd/system/$(SERVICE)

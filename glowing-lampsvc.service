@@ -3,7 +3,7 @@ Description=Tcpdump service
 After=network.target
 
 [Service]
-ExecStart=/bin/bash /usr/bin/tcpdumpscript.sh
+ExecStart=/bin/bash /usr/local/bin/glowing-lamp
 WorkingDirectory=/var/log/tcpdump/
 StandardOutput=inherit
 StandardError=inherit

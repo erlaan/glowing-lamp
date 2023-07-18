@@ -3,7 +3,7 @@ This is a service i use to make sure a computer that is used for it-security is 
 
 
 # Prerequisite
-To run this program tcpdump need to be installed
+To run this program tcpdump need to be installed on the host
 ## Installation 
 
 ```
